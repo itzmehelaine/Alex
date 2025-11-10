@@ -1,0 +1,117 @@
+    body, html {
+        height: 100%;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        overflow: hidden;
+    }
+
+    .slide {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.6s ease-in-out;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .slide.active {
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .text-box {
+        padding: 30px 60px;
+        border-radius: 20px;
+        font-size: 3.5rem;
+        font-weight: bold;
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    /* Slide 1 */
+    #slide1 {
+        background-color: white;
+    }
+
+    #slide1 .text-box {
+        background-color: #ff69b4; /* hot pink */
+        color: #ff1493; /* deeper hot pink */
+    }
+
+    #slide1 .btn {
+        background-color: #ff69b4;
+        color: white;
+    }
+
+    /* Slide 2 */
+    #slide2 {
+        background-color: #ff69b4;
+    }
+
+    #slide2 .text-box {
+        background-color: #ff1493;
+        color: white;
+    }
+
+    #slide2 .btn {
+        background-color: white;
+        color: #ff69b4;
+    }
+
+    /* Slide 3 */
+    #slide3 {
+        background-color: #ff69b4;
+    }
+
+    #slide3 .text-box {
+        background-color: #ff1493;
+        color: white;
+    }
+
+    /* Cake SVG */
+    .cake-container {
+        margin: 30px 0;
+    }
+
+    /* Candle flame animation */
+    @keyframes flicker {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.7; transform: scale(0.95); }
+    }
+
+    .flame {
+        animation: flicker 0.8s infinite alternate;
+    }
+
+    .candle-lit .flame {
+        fill: #ffd700;
+        filter: drop-shadow(0 0 8px #ff8c00);
+    }
+
+    .candle-extinguished .flame {
+        display: none;
+    }
+</style>
